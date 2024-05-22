@@ -44,6 +44,28 @@
         .d-flex{
             display: flex;
         }
+        #about{
+            height: 50vw;
+            background: url('./img/image.jpg') no-repeat center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 990px) {
+            #about{
+                height: calc(100vw + 50px);
+                display: block;
+                padding: 5rem 0 0;
+                /* 오른쪽이 잘림, 0이니까 단축 가능 */
+                text-align: center;
+                background-position: calc(-88vw - 7px) center;
+                /* 
+                앞이 x축, 뒤는 y축
+                객체에만 transform이 적용. calc로 수치를 직접 입력 
+                */
+            }
+        }
     </style>
 </head>
 
@@ -51,6 +73,7 @@
     <p class="checksvg">
         배경 이미지로 svg 처리하기
     </p>
+
     <!-- dl>dt{타이틀컨텐츠}+dd.checksvg.d-flex*5{<span>리스트들</span>} -->
     <!-- {} 안에는 태그 넣기 가능 -->
     <dl>
@@ -61,5 +84,9 @@
         <dd class="checksvg d-flex"><span>리스트들</span></dd>
         <dd class="checksvg d-flex"><span>리스트들</span></dd>
     </dl>
+    
+    <div id="about">
+        <h2>타이틀</h2>
+    </div>
 </body>
 </html>
