@@ -18,14 +18,19 @@
         }
         .checksvg:before{
             content: "";
-            /* url 사용 가능 대신 width,height가 먹히지 않음 이미지 사이즈 그대로 사용해야함 */
+            /* content안에 url 사용 가능, 대신 width,height가 먹히지 않음 > 이미지 사이즈 그대로 사용해야함 */
             display: block;
             width: 3rem;
             height: 3rem;
             background-image: url(./img/check.svg);
             background-size: 50%;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center;            
+            /* 
+            background-image의 크기는 background-size로 조절
+            단 공간만큼 background-image가 반복되기 때문에 background-repeat: no-repeat 설정 후 
+            background-position으로 위치를 정하면 된다.
+            */
         }
         .d-flex{
             display: flex;
@@ -38,6 +43,7 @@
         배경 이미지로 svg 처리하기
     </p>
     <!-- dl>dt{타이틀컨텐츠}+dd.checksvg.d-flex*5{<span>리스트들</span>} -->
+    <!-- {} 안에는 태그 넣기 가능 -->
     <dl>
         <dt>타이틀컨텐츠</dt>
         <dd class="checksvg d-flex"><span>리스트들</span></dd>
