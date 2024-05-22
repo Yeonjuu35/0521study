@@ -53,16 +53,34 @@
             align-items: center;
         }
         @media (max-width: 990px) {
-            #about{
+            /* 
+            #about{ 
                 height: calc(100vw + 50px);
                 display: block;
                 padding: 5rem 0 0;
-                /* 오른쪽이 잘림, 0이니까 단축 가능 */
+                오른쪽이 잘림, 0이니까 단축 가능
                 text-align: center;
                 background-position: calc(-88vw - 7px) center;
-                /* 
                 앞이 x축, 뒤는 y축
                 객체에만 transform이 적용. calc로 수치를 직접 입력 
+            }
+            */
+            #about{
+                height: calc(100vw + 50px);
+                flex-direction: column;
+                background-image: url(./img/mobile_img.jpg);
+                /*
+                위쪽의 스타일은 내려받고 싶을때 background-image로 이미지만 바꿔치기를 해준다
+                */
+
+                /* 
+                border : 1px solid black;
+                border-width : 3px;
+                위의 border 스타일을 손대지 않고 !important를 사용하지 않고 싶을경우
+                위의 border보다 좀 더 자세히 구체적으로 스타일을 입력(스타일 우선순위 참고)
+                border-width : 3px 3px; < border도 상하/좌우 처럼 기입할 수 있다.
+                상하만 선이 존재하고 좌우는 투명할때
+                border-color : black transparent; < 새로 만들어서 추가하는 것보다 보이지 않도록 제작하는 것이 틀이 무너지지 않는다.
                 */
             }
         }
